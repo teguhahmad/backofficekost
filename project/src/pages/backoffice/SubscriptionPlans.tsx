@@ -436,16 +436,15 @@ const SubscriptionPlans: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm text-gray-700 mb-1">Financial Reports</label>
-                    <select
-                      name="feature_financial_reports"
-                      defaultValue={editingPlan?.features.financial_reports}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                      <option value="basic">Basic</option>
-                      <option value="advanced">Advanced</option>
-                      <option value="predictive">Predictive</option>
-                    </select>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        name="feature_financial_reports"
+                        defaultChecked={editingPlan?.features.financial_reports}
+                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span className="text-sm text-gray-700">Financial Reports</span>
+                    </label>
                   </div>
 
                   <div>
